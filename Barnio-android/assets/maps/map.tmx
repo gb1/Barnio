@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="1000" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="8bitMetrodian" tilewidth="32" tileheight="32" spacing="8">
+  <image source="8bitMetrodian.png" width="872" height="752"/>
+ </tileset>
+ <layer name="background" width="1000" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt17ENgDAQBEH335p7+CYsEUNIYBEg4I1+gsn3wuuttQ4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAtsUADAAAAVBYn2S0AAABQUUxkNwEAAEAls2/uowMAAMB3rr65jw4AAADPGYctUfZ+eMNYoAEAAPiXHbaM/lQ=
+  </data>
+ </layer>
+</map>
