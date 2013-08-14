@@ -5,6 +5,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 
@@ -36,7 +37,7 @@ public class Play implements Screen {
 	      camera.position.y = HEIGHT / 2;
 	      camera.update();
 	   
-	      hiro = new Hiro();
+	      hiro = new Hiro((TiledMapTileLayer)map.getLayers().get(0));
 	      hiro.setScale(unitScale);
 	      
 	      
@@ -61,6 +62,7 @@ public class Play implements Screen {
 		hiro.draw(render.getSpriteBatch());
 		render.getSpriteBatch().end();
 
+		camera.update();
 	}
 
 	@Override
