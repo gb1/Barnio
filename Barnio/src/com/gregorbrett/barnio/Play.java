@@ -16,8 +16,10 @@ public class Play implements Screen {
 
 	private final float unitScale = 1 / 32f;
 
-	private static int WIDTH = 30;
+	private static int WIDTH = 34;
 	private static int HEIGHT = 20;
+	
+	private Hiro hiro;
 
 	@Override
 	public void show() {
@@ -34,10 +36,12 @@ public class Play implements Screen {
 	      camera.position.y = HEIGHT / 2;
 	      camera.update();
 	   
+	      hiro = new Hiro();
+	      hiro.setScale(unitScale);
 	      
-	   
-	      camera.update();
-
+	      
+	      //set up player position
+	      //player.setPosition(20 * player.getCollisionLayer().getTileWidth(), 14 * player.getCollisionLayer().getTileHeight());
 	}
 
 	@Override
@@ -52,6 +56,10 @@ public class Play implements Screen {
 
 		render.setView(camera);
 		render.render();
+		
+		render.getSpriteBatch().begin();
+		hiro.draw(render.getSpriteBatch());
+		render.getSpriteBatch().end();
 
 	}
 
